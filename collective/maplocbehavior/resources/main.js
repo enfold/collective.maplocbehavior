@@ -2,7 +2,7 @@
 // edit page.
 
 jQuery(function($) {
-    $('.geolocation_wrapper.edit .geolocation').productsMapEdit();
+    $('.geolocation_wrapper.edit').productsMapEdit();
 });
 
 

@@ -8,7 +8,7 @@ setup(
     version=version,
     description="Provides map location behavior for Dexterity content types",
     long_description=open("README.rst").read() + "\n" +
-                   open(os.path.join("docs", "HISTORY.txt")).read(),
+                   open("HISTORY.txt").read(),
     # Get more strings from
     # http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[

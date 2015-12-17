@@ -7,4 +7,4 @@ This package adds a Dexterity behavior to add geolocation fields to content type
 
 Install this package as you would any Plone package. Dependencies include plone.app.dexterity, plone.formwidget.geolocation and Products.Maps.
 
-Most of the implementation is straightforward. The only part that's hacky is removing the jsregistry conditions for shipping the Products.Maps editing facility. This was because I couldn't figure out how to provide a BrowserView for an edit form by virtue of the content type having a behavior. Drop me a note if you know how to do it.
+Most of the implementation is straightforward. The only part that's hacky is removing the jsregistry conditions for shipping the Products.Maps editing facility. This was because I couldn't figure out how to provide a BrowserView for an add form by virtue of the content type having a behavior. Drop me a note if you know how to do it.

@@ -4,7 +4,11 @@
     enabled="True" id="jquery-ui-autocomplete.js" inline="False"
     expression="" />
 
- <javascript cacheable="False" compression="safe" cookable="False"
+ <javascript cacheable="False" compression="safe" cookable="True"
+    enabled="True" id="maps-config.js" inline="False"
+    expression="" />
+
+ <javascript cacheable="False" compression="safe" cookable="True"
     enabled="True" id="maps-i18n.js" inline="False"
     expression=""
     insert-after="maps-config.js" />

@@ -14,6 +14,7 @@ from Products.Maps.interfaces import IMarker
 from zope import schema
 from zope.component import adapter
 from zope.component import getMultiAdapter
+from zope.globalrequest import getRequest
 from zope.interface import implementer
 from zope.interface import Interface
 from zope.interface import provider
@@ -26,14 +27,14 @@ from collective.maplocbehavior import MessageFactory as _
 
 @provider(IContextAwareDefaultFactory)
 def defaultLocation(context):
-    config = getMultiAdapter((context, context.REQUEST), name="maps_configuration")
+    config = getMultiAdapter((context, getRequest()), name="maps_configuration")
     lat, lon = [float(s) for s in config.default_location.split(',')]
     return Geolocation(lat, lon)
 
 
 @provider(IContextSourceBinder)
 def getMarkerIconVocab(context):
-    config = getMultiAdapter((context, context.REQUEST), name="maps_configuration")
+    config = getMultiAdapter((context, getRequest()), name="maps_configuration")
     marker_icons = config.marker_icons
     terms = []
     for icon in marker_icons:

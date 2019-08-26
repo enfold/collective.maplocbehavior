@@ -27,9 +27,11 @@ from collective.maplocbehavior import MessageFactory as _
 
 @provider(IContextAwareDefaultFactory)
 def defaultLocation(context):
-    config = getMultiAdapter((context, getRequest()), name="maps_configuration")
-    lat, lon = [float(s) for s in config.default_location.split(',')]
-    return Geolocation(lat, lon)
+    # TODO: This needs to be updated to use plone.app.registry to store configs and not portal_properties
+    # config = getMultiAdapter((context, getRequest()), name="maps_configuration")
+    # lat, lon = [float(s) for s in config.default_location.split(',')]
+    # return Geolocation(lat, lon)
+    return Geolocation(0.0, 0.0)
 
 
 @provider(IContextSourceBinder)
